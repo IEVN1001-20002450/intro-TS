@@ -1,11 +1,11 @@
 
 
-function suma(){
+/*function suma(){
     let x=2;
     let y=4;
     let d=x+y
     console.log(d)
-}
+}*/
 
 function resta(a:number, b:number):number{
     return a-b;
