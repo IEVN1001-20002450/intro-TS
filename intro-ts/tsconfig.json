@@ -19,5 +19,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "temas-ts"]
+  "include": ["src", "src/temas-ts"]
 }
