@@ -1,29 +1,22 @@
-
 export class Areas{
-    protected area:number;
-    constructor(area:number){
-        this.area=area;
+    protected base:number;
+    protected altura:number;
+    constructor (base:number,altura:number){
+    this.base=base;
+    this.altura=altura;
     }
-    imprimir(){
-        console.log("Nombre: " + this.area);
+    public AreaCuadrado(){
+    return this.base * this.base;
     }
-} 
-
-class Cuadrado extends Areas{
-    private base:number;
-    constructor(base:number,area:number){
-        super(area);
-        this.base=base;
+    public AreaRectangulo(){
+    return this.base * this.altura;
     }
-    imprimir(){
-        console.log(`calcularemos el area del cuadrado cullo lado mide: ${this.base}`)
+    public AreaCirculo(){
+    return (this.base*this.base)* 3.1416;
     }
-    AreaCuadrado(){
-        this.area=this.base*this.base;
-        console.log(this.area)
-    }      
-}
-
-const cuadrado= new Cuadrado(5,5)
-cuadrado.imprimir();
-cuadrado.AreaCuadrado();
+    }
+    
+    const areas = new Areas(3,9);
+    console.log("El area del cuadrado cullo lado mide 3 es: " + areas.AreaCuadrado());
+    console.log("el area de un rectángulo culla base mide 3 y altura mide 9 es: " + areas.AreaRectangulo());
+    console.log("El area de un circulo cullo radio mide 3 es: "+ areas.AreaCirculo());
